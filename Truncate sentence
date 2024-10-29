@@ -1,0 +1,13 @@
+class Solution {
+public:
+    string truncateSentence(string s, int k) {
+        string ans="";
+        stringstream ss(s);
+        string word;
+        while(ss>>word and k>0){
+            ans+=word+" ";
+            k--;
+        }
+        return ans.substr(0,ans.length()-1);
+    }
+};
